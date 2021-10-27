@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
@@ -20,11 +19,10 @@
     /* nav */
     #nav {
         height: 60px;
-        background-color: rgb(199, 199, 199);
+        background-color: rgb(231, 231, 231);
         display: flex;
         align-items: center;
         padding: 0 10px;
-       
 
     }
 
@@ -40,13 +38,6 @@
 
     #nav>div:nth-child(3) {
         width: 40%;
-        text-align: center;
-    }
-    #nav>div:nth-child(3) button {
-        padding: 8px 60px;
-      border-radius: 4px;
-      font-size: 16px;
-      margin: 0 4px;
     }
 
     #nav ul {
@@ -65,61 +56,40 @@
         font-size: 1.5em;
         font-weight: 900;
     }
-    /* nav */
 
-    #sear {        
-        position: relative;
-        height: 700px;
-    }
-    #sear img{
-        width: 100%;
-       height: 100%;
-       object-fit: cover;
-       object-position: top center;
+    #searchbar {
+        /* background-color: yellow; */
     }
 
-    #searchbar{
-        position: absolute;
-        width: 80%;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        text-align: center;
-       
-        /* background: red; */
-    }
     #searchbar input {
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 80%;
-        height: 65px;
+        background-color: rgb(240, 240, 240);
+        width: 78%;
+        height: 35px;
         box-sizing: border-box;
         padding: 10px;
         font-weight: bold;
-        color: rgb(255, 255, 255);
+        color: rgb(56, 56, 56);
 
         outline-color: rgb(0, 0, 0);
         border-radius: 4px;
-        font-size: 1.5em;
 
 
     }
 
     #searchbar button {
-        /* background-color: rgb(255, 255, 255); */
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 19%;
-        height: 65px;
-        color: rgb(255, 255, 255);
+        background-color: rgb(245, 245, 245);
+        width: 20%;
+        height: 35px;
+        color: rgb(56, 56, 56);
         border-radius: 4px;
-        font-size: 1.5em;
 
         box-sizing: border-box;
     }
 
+    /* nav */
 </style>
 
 <body>
-
     <div id="cont">
         <div id="nav">
             <div>
@@ -132,21 +102,15 @@
                     <li><a href="">Receipe of Day</a></li>
                 </ul>
             </div>
-            <div>
-                <button>Sign Up</button>
-                <button>Log in</button>
+            <div id="searchbar">
+                <input id="inp" type="text" placeholder="Search Receipe">
+                <button id="btn" onclick="showReceipe()">Search</button>
             </div>
+
         </div>
-            <div id="sear">
-                <img src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-                <div id="searchbar">
-                    <input id="inp" type="text" placeholder="Search Receipe">
-                    <button id="btn" onclick="showReceipe()">Search</button>
-                </div>
-            </div>
+        <div id="parent"></div>
 
-
-        <script src="index.js"></script>
+        <script src="receipe.js"></script>
 </body>
 
 </html>
