@@ -1,3 +1,3 @@
-let receipe = JSON.parse(localStorage.setItem('receipe'))
+let receipe = JSON.parse(localStorage.getItem('receipe'))
 
 console.log(receipe)
