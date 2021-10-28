@@ -10,7 +10,7 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
-    * {
+   * {
         margin: 0;
         padding: 0;
         font-family: 'Source Sans Pro', sans-serif;
@@ -111,7 +111,6 @@
         font-size: 1.5em;
         /* height: 40%; */
         justify-content: space-between;
-        gap: 20px;
 
     }
 
@@ -186,16 +185,18 @@
     #parent>div:nth-child(3) {
         padding: 20px;
         background-color: #212121;
+        background-color: #c4c4c4;
         color: white;
+        color: rgb(65, 23, 23);
         margin: 20px 0;
+        /* color: #ffe000; */
     }
 
 
-
-    /* container */
+    /* nav */
 </style>
-
 <body>
+
     <div id="cont">
         <div id="nav">
             <div>
@@ -205,7 +206,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="">Latest Receipes</a></li>
-                    <li><a href="day.html">Receipe of Day</a></li>
+                    <li><a href="">Receipe of Day</a></li>
                 </ul>
             </div>
             <div id="searchbar">
@@ -216,7 +217,7 @@
         </div>
         <div id="parent"></div>
     </div>
-    <script src="receipe.js"></script>
+    <script src="day.js"></script>
 </body>
 
 </html>

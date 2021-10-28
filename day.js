@@ -1,10 +1,18 @@
+async function dayReceipe() {
+   
+    let res = await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+
+    let data = await res.json()
+    console.log(data.meals)
+    receipe(data.meals)
+}
+
+dayReceipe()
+
 
 let parent = document.getElementById('parent')
 
-let item = JSON.parse(localStorage.getItem('item'))
-// var a = 'kjhdfh'
-// a.substr
-function receipe() {
+function receipe(item) {
     console.log(item)
     item.forEach(({ strArea, strMeal, strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7, strIngredient8, strIngredient9, strIngredient10, strIngredient11, strIngredient12, strIngredient13, strIngredient14, strIngredient15, strIngredient16, strIngredient17, strIngredient18, strIngredient19, strIngredient20, strMeasure1, strMeasure2, strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7, strMeasure8, strMeasure9, strMeasure10, strMeasure11, strMeasure12, strMeasure13, strMeasure14, strMeasure15, strMeasure16, strMeasure17, strMeasure18, strMeasure19, strMeasure20, strInstructions, strMealThumb, strYoutube }) => {
 
@@ -165,8 +173,7 @@ function receipe() {
 
     });
 }
-receipe()
-console.log(receipe)
+
 
 async function showReceipe() {
     let inp = document.getElementById('inp').value
